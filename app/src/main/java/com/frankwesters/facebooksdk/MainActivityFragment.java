@@ -39,7 +39,7 @@ public class MainActivityFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_main, container, false);
 
         //Check if logged in
-        if (AccessToken.getCurrentAccessToken() == null || 1 == 1) {
+        if (AccessToken.getCurrentAccessToken() == null) {
             startActivityForResult(new Intent(this.getActivity(), LoginActivity.class), LOGIN_REQUEST_CODE);
         } else {
             renderLayout();
