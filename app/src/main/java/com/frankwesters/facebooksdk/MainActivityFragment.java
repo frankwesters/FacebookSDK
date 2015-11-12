@@ -40,6 +40,7 @@ public class MainActivityFragment extends Fragment {
 
         //Check if logged in
         if (AccessToken.getCurrentAccessToken() == null) {
+            System.out.println("check");
             startActivityForResult(new Intent(this.getActivity(), LoginActivity.class), LOGIN_REQUEST_CODE);
         } else {
             renderLayout();
